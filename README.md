@@ -48,3 +48,7 @@ The snippet above is deliberately tiny. To run it for real, wire these up; the n
 - **Go Developer Email Verification Verify Devtools Go A:** By default mail goes through a **shared** verified sender — fine for tests, but generic From + limited volume + shared reputation.
 - **Go Developer Email Verification Verify Devtools Go A:** For production, verify **your own** domain: `POST /v1/email/domain/verify` with `{"domain":"mail.yourco.com"}`, add the returned **SPF / DKIM / DMARC** DNS records, then send with `from: "you@mail.yourco.com"`.
 - **Go Developer Email Verification Verify Devtools Go A:** Use a dedicated subdomain and **warm it up** (ramp volume over days) to protect deliverability.
+
+## Further reading
+
+- [Why I Chose FastAPI for Transactional Email Service Compliance (Custom Domain Bounces)](docs/why-i-chose-fastapi-for-transactional-email-servi-ozbigz.md)
